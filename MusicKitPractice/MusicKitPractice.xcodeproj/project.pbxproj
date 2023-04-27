@@ -11,14 +11,19 @@
 		AF2F20BC29F9020A006E13E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20BB29F9020A006E13E6 /* ContentView.swift */; };
 		AF2F20BE29F9020B006E13E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2F20BD29F9020B006E13E6 /* Assets.xcassets */; };
 		AF2F20C129F9020B006E13E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2F20C029F9020B006E13E6 /* Preview Assets.xcassets */; };
+		AF2F20CB29F9025D006E13E6 /* PinnedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */; };
+		AF2F20CD29F90490006E13E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20CC29F90490006E13E6 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF20C10229F93D7F00576F8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF2F20B629F9020A006E13E6 /* MusicKitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicKitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2F20B929F9020A006E13E6 /* MusicKitPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicKitPracticeApp.swift; sourceTree = "<group>"; };
 		AF2F20BB29F9020A006E13E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF2F20BD29F9020B006E13E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF2F20C029F9020B006E13E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSong.swift; sourceTree = "<group>"; };
+		AF2F20CC29F90490006E13E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		AF2F20B829F9020A006E13E6 /* MusicKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				AF20C10229F93D7F00576F8E /* Info.plist */,
 				AF2F20B929F9020A006E13E6 /* MusicKitPracticeApp.swift */,
-				AF2F20BB29F9020A006E13E6 /* ContentView.swift */,
+				AF2F20C929F90239006E13E6 /* ViewModel */,
+				AF2F20C829F9022F006E13E6 /* Model */,
+				AF2F20C729F90222006E13E6 /* View */,
 				AF2F20BD29F9020B006E13E6 /* Assets.xcassets */,
 				AF2F20BF29F9020B006E13E6 /* Preview Content */,
 			);
@@ -65,6 +73,30 @@
 				AF2F20C029F9020B006E13E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF2F20C729F90222006E13E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF2F20BB29F9020A006E13E6 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF2F20C829F9022F006E13E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF2F20C929F90239006E13E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF2F20CC29F90490006E13E6 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2F20CB29F9025D006E13E6 /* PinnedSong.swift in Sources */,
 				AF2F20BC29F9020A006E13E6 /* ContentView.swift in Sources */,
+				AF2F20CD29F90490006E13E6 /* ViewModel.swift in Sources */,
 				AF2F20BA29F9020A006E13E6 /* MusicKitPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +304,13 @@
 				DEVELOPMENT_TEAM = 8R3N359429;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicKitPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +335,13 @@
 				DEVELOPMENT_TEAM = 8R3N359429;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicKitPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
