@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import MusicKit
+
+struct SearchMusic {
+    var searchedSong: MusicItemCollection<Song> = []
+}

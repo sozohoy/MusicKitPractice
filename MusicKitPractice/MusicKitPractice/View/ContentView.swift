@@ -6,35 +6,46 @@
 //
 
 import SwiftUI
+
+import ComposableArchitecture
 import MusicKit
+
 
 struct ContentView: View {
     
-    @StateObject private var viewModel = ViewModel()
+    @StateObject private var viewModel = SearchMusicViewModel()
+    let store: StoreOf<SearchMusic1>
     
-    var body: some View {
-        NavigationView {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                    
+    private var searchResultsList: some View {
+        WithViewStore(self.store, observe: {$0}) { viewStore in
+            List(viewStore.music.isEmpty ? [] : viewStore.music) { music in
+                ContentCell(artwork: music.artwork, title: music.title, artistName: music.artistName)
+                    .onTapGesture {
+                        viewStore.send(.openAppleMusic(searchUrl: music.url))
+                    }
             }
         }
-        .searchable(text: $viewModel.searchTerm, prompt: "Music")
-        .onChange(of: viewModel.searchTerm, perform: viewModel.requestUpdatedSearchResult)
-        .onAppear {
-            viewModel.settingMuesicAuthorization()
+    }
+    
+    var body: some View {
+        WithViewStore(self.store,
+                      observe: { $0 }) { viewStore in
+            NavigationView {
+                searchResultsList
+            }
+            .searchable(text: viewStore.binding(get: \.searchTerm, send: SearchMusic1.Action.searchTermChanged))
+//            .onAppear {
+//                viewModel.settingMuesicAuthorization()
+//            }
         }
-        
     }
     
 
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

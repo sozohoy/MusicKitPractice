@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct MusicKitPracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: Store(initialState: SearchMusic1.State(), reducer: SearchMusic1()))
         }
     }
 }

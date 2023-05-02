@@ -6,15 +6,41 @@
 //
 
 import SwiftUI
+import MusicKit
 
 struct ContentCell: View {
+    
+    // MARK: - Properties
+    
+    let artwork: Artwork?
+    let title: String
+    let artistName: String
+    
+    // MARK: - View
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if let existingArtwork = artwork {
+                VStack {
+                    Spacer()
+                    ArtworkImage(existingArtwork, width: 56)
+                        .cornerRadius(6)
+                    Spacer()
+                }
+            }
+            VStack(alignment: .leading) {
+                Text(title)
+                    .lineLimit(1)
+                    .foregroundColor(.primary)
+                if !artistName.isEmpty {
+                    Text(artistName)
+                        .lineLimit(1)
+                        .foregroundColor(.secondary)
+                        .padding(.top, -4.0)
+                }
+            }
+        }
     }
 }
 
-struct ContentCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentCell()
-    }
-}
+

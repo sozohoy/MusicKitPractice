@@ -12,7 +12,11 @@
 		AF2F20BE29F9020B006E13E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2F20BD29F9020B006E13E6 /* Assets.xcassets */; };
 		AF2F20C129F9020B006E13E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2F20C029F9020B006E13E6 /* Preview Assets.xcassets */; };
 		AF2F20CB29F9025D006E13E6 /* PinnedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */; };
-		AF2F20CD29F90490006E13E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20CC29F90490006E13E6 /* ViewModel.swift */; };
+		AF2F20CD29F90490006E13E6 /* SearchMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F20CC29F90490006E13E6 /* SearchMusicViewModel.swift */; };
+		AF75F3C62A00DFD7007978CA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AF75F3C52A00DFD7007978CA /* ComposableArchitecture */; };
+		AFE3EFC229FFAC4500B449C0 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE3EFC129FFAC4500B449C0 /* test.swift */; };
+		AFE3EFC429FFAF5A00B449C0 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE3EFC329FFAF5A00B449C0 /* ContentCell.swift */; };
+		AFE3EFC629FFB15900B449C0 /* SearchMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE3EFC529FFB15900B449C0 /* SearchMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +27,10 @@
 		AF2F20BD29F9020B006E13E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF2F20C029F9020B006E13E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSong.swift; sourceTree = "<group>"; };
-		AF2F20CC29F90490006E13E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AF2F20CC29F90490006E13E6 /* SearchMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewModel.swift; sourceTree = "<group>"; };
+		AFE3EFC129FFAC4500B449C0 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		AFE3EFC329FFAF5A00B449C0 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		AFE3EFC529FFB15900B449C0 /* SearchMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF75F3C62A00DFD7007978CA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,8 @@
 		AF2F20B829F9020A006E13E6 /* MusicKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				AFE3EFC82A00D6D800B449C0 /* New Group */,
+				AFE3EFC72A00D0DF00B449C0 /* Network */,
 				AF20C10229F93D7F00576F8E /* Info.plist */,
 				AF2F20B929F9020A006E13E6 /* MusicKitPracticeApp.swift */,
 				AF2F20C929F90239006E13E6 /* ViewModel */,
@@ -79,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2F20BB29F9020A006E13E6 /* ContentView.swift */,
+				AFE3EFC329FFAF5A00B449C0 /* ContentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2F20CA29F9025D006E13E6 /* PinnedSong.swift */,
+				AFE3EFC529FFB15900B449C0 /* SearchMusic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,9 +106,24 @@
 		AF2F20C929F90239006E13E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AF2F20CC29F90490006E13E6 /* ViewModel.swift */,
+				AF2F20CC29F90490006E13E6 /* SearchMusicViewModel.swift */,
+				AFE3EFC129FFAC4500B449C0 /* test.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFE3EFC72A00D0DF00B449C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AFE3EFC82A00D6D800B449C0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +142,9 @@
 			dependencies = (
 			);
 			name = MusicKitPractice;
+			packageProductDependencies = (
+				AF75F3C52A00DFD7007978CA /* ComposableArchitecture */,
+			);
 			productName = MusicKitPractice;
 			productReference = AF2F20B629F9020A006E13E6 /* MusicKitPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +173,9 @@
 				Base,
 			);
 			mainGroup = AF2F20AD29F90209006E13E6;
+			packageReferences = (
+				AF75F3C42A00DFD7007978CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = AF2F20B729F9020A006E13E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,8 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2F20CB29F9025D006E13E6 /* PinnedSong.swift in Sources */,
+				AFE3EFC629FFB15900B449C0 /* SearchMusic.swift in Sources */,
 				AF2F20BC29F9020A006E13E6 /* ContentView.swift in Sources */,
-				AF2F20CD29F90490006E13E6 /* ViewModel.swift in Sources */,
+				AF2F20CD29F90490006E13E6 /* SearchMusicViewModel.swift in Sources */,
+				AFE3EFC429FFAF5A00B449C0 /* ContentCell.swift in Sources */,
+				AFE3EFC229FFAC4500B449C0 /* test.swift in Sources */,
 				AF2F20BA29F9020A006E13E6 /* MusicKitPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF75F3C42A00DFD7007978CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF75F3C52A00DFD7007978CA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF75F3C42A00DFD7007978CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF2F20AE29F90209006E13E6 /* Project object */;
 }
